@@ -15,7 +15,9 @@ export class MangaService {
       author: 'Kentaro Miura',
       cover: 'https://m.media-amazon.com/images/I/71lnvXSiITL._AC_UF1000,1000_QL80_.jpg',
       created_at: new Date('01-01-1998'),
-      description: 'Teste'
+      last_release: new Date('01-01-1998'),
+      description: 'Teste',
+      adaption_trailer: ''
     },
     {
       id: 2,
@@ -23,7 +25,9 @@ export class MangaService {
       author: 'Hirano',
       cover: 'https://m.media-amazon.com/images/I/9189P7CiUNL._AC_UF1000,1000_QL80_.jpg',
       created_at: new Date('01-01-1999'),
-      description: 'Teste2'
+      last_release: new Date('01-01-1998'),
+      description: 'Teste2',
+      adaption_trailer: ''
     },
     {
       id: 3,
@@ -31,7 +35,9 @@ export class MangaService {
       author: 'Hirano',
       cover: 'https://m.media-amazon.com/images/I/81hzeCKFGoL._AC_UF1000,1000_QL80_.jpg',
       created_at: new Date('01-01-1999'),
-      description: 'Teste2'
+      last_release: new Date('01-01-1998'),
+      description: 'Teste2',
+      adaption_trailer: ''
     },
     {
       id: 4,
@@ -39,7 +45,9 @@ export class MangaService {
       author: 'Hirano',
       cover: 'https://m.media-amazon.com/images/I/51Y6GWVJ94L._AC_UF1000,1000_QL80_.jpg',
       created_at: new Date('01-01-1999'),
-      description: 'Teste2'
+      last_release: new Date('01-01-1998'),
+      description: 'Teste2',
+      adaption_trailer: ''
     },
     {
       id: 5,
@@ -47,7 +55,9 @@ export class MangaService {
       author: 'Hirano',
       cover: 'https://m.media-amazon.com/images/I/71TY7kJBo9L._AC_UF1000,1000_QL80_.jpg',
       created_at: new Date('01-01-1999'),
-      description: 'Teste2'
+      last_release: new Date('01-01-1998'),
+      description: 'Teste2',
+      adaption_trailer: ''
     }
   ];
 

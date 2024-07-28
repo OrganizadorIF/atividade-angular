@@ -4,5 +4,7 @@ export interface Manga {
     author: string;
     cover: string;
     created_at: Date;
+    last_release: Date;
     description: string;
+    adaption_trailer: string;
 }

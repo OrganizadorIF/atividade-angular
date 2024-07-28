@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class MangaListComponent {
 
   public constructor(
-    public MangaService: MangaService
+    public mangaService: MangaService
   ) { }
 
 }
