@@ -1,0 +1,17 @@
+<div class="card shadow custom-card">
+    <h2 class="card-header custom-card-header">Manga List</h2>
+    <div class="card-body custom-card-body">
+        <ul class="list-group test" *ngFor="let manga of MangaService.mangaList">
+            <li class="list-group-item custom-list-item teste">
+                <img src="{{manga.cover}}" style="width: 180px; height: 240px; border-radius: 2px; border-style: groove;">
+                <div style="align-self: center; text-align: center;">
+                    <h3 class="card-title">{{manga.title}}</h3>
+                    <h4 class="card-subtitle">{{manga.author}}</h4>
+                </div>
+                <div class="button-container">
+                    <!-- <button (click)="onDelete(manga.id)" class="remove-button">Excluir</button> -->
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
