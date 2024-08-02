@@ -1,11 +1,11 @@
-.card {
+.custom-card {
     max-width: 80%;
     margin: 0 auto 1.5rem auto;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.card-header {
+.custom-card-header {
     background-color: #333d49;
     color: #fff;
     padding: 1rem;
@@ -21,7 +21,7 @@
     padding-bottom: 15px;
 }
 
-.card-body {
+.custom-card-body {
     background-color: #f8f9fa;
     padding: 1.5rem;
     border-radius: 15px;

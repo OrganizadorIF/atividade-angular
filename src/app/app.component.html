@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+<nav class="custom-navbar">
   <img src="https://raw.githubusercontent.com/OrganizadorIF/teste/main/skull-knight.png">
   <span class="navbar-brand">MyMangaList</span>
-  <div class="navbar-nav ml-auto navbar-items">
-      <button class="custom-nav-link" routerLink="/list" routerLinkActive="active-link">List</button>
-      <button class="custom-nav-link" routerLink="/form" routerLinkActive="active-link">Add</button>
-      <button class="custom-nav-link" style="margin-right: 0;" routerLink="/about" routerLinkActive="active-link">About</button>
+  <div class="navbar-items">
+    <button class="custom-nav-link" routerLink="/list" routerLinkActive="active-link">LIST</button>
+    <button class="custom-nav-link" routerLink="/form" routerLinkActive="active-link">ADD</button>
+    <button class="custom-nav-link" style="margin-right: 0;" routerLink="/about" routerLinkActive="active-link">ABOUT</button>
   </div>
 </nav>
-<div class="container">
+<div class="custom-container">
   <router-outlet></router-outlet>
 </div>

@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { BsModalRef } from "ngx-bootstrap/modal";
+import { Manga } from "../../models/Manga";
 
 @Component({
-  selector: 'app-modal',
+  selector: "app-modal",
   standalone: true,
-  imports: [],
-  templateUrl: './modal.component.html',
-  styleUrl: './modal.component.css'
+  imports: [CommonModule],
+  templateUrl: "./modal.component.html",
+  styleUrl: "./modal.component.css",
 })
 export class ModalComponent {
+
+  title?: string;
+  message?: string;
+
+  @Input() mangaData?: Manga;
+
+  constructor(
+    public bsModalRef: BsModalRef
+  ) { }
 
 }

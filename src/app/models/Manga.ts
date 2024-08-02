@@ -3,8 +3,8 @@ export interface Manga {
     title: string;
     author: string;
     cover: string;
-    created_at: Date;
-    last_release: Date;
+    created_at: string;
+    last_release: string;
     description: string;
     adaption_trailer: string;
 }

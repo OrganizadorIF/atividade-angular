@@ -1,8 +1,8 @@
+import { CommonModule, formatDate } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
-import { MangaService } from '../../services/manga.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MangaService } from '../../services/manga.service';
 import { Manga } from '../../models/Manga';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-manga-form',
@@ -16,8 +16,8 @@ export class MangaFormComponent {
   title = '';
   author = '';
   cover = '';
-  created_at = new Date();
-  last_release = new Date();
+  created_at = '';
+  last_release = '';
   description = '';
   adaption_trailer = '';
 
@@ -50,8 +50,8 @@ export class MangaFormComponent {
     this.title = '';
     this.author = '';
     this.cover = '';
-    this.created_at = new Date();
-    this.last_release = new Date();
+    this.created_at = '';
+    this.last_release = '';
     this.description = '';
     this.adaption_trailer = '';
   }

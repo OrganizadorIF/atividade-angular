@@ -1,8 +1,8 @@
-<div class="card">
-    <h2 class="card-header">Manga List</h2>
-    <div class="card-body">
+<div class="custom-card">
+    <h2 class="custom-card-header">Manga List</h2>
+    <div class="custom-card-body">
         <ul *ngFor="let manga of mangaService.mangaList">
-            <li>
+            <li (click)="openModal(manga)">
                 <img src="{{manga.cover}}" class="manga-image">
                 <div class="manga-details">
                     <h3 class="manga-title">{{manga.title}}</h3>

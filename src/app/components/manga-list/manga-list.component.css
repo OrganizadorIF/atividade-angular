@@ -1,11 +1,12 @@
-.card {
+.custom-card {
     max-width: 80%;
     margin: 0 auto 1.5rem auto;
     border-radius: 10px;
     overflow: hidden;
+    padding-bottom: 6rem;
 }
 
-.card-header {
+.custom-card-header {
     background-color: #333d49;
     color: #fff;
     padding: 1rem;
@@ -13,17 +14,18 @@
     font-weight: bold;
     border-radius: 15px;
     text-align: center;
-    width: 30%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     font-family: 'JOSEFIN SANS';
     padding-top: 18px;
     padding-bottom: 15px;
+    margin-bottom: 1.8rem;
 }
 
-.card-body {
+.custom-card-body {
     background-color: #f8f9fa;
-    padding: 1rem;
+    padding: 1.8rem 1rem 1rem 1rem;
     border-radius: 15px;
     display: flex;
     flex-direction: row;
@@ -47,10 +49,11 @@ li {
     position: relative;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
     margin-left: 20px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 li:hover {
@@ -73,10 +76,36 @@ li:hover {
     margin: 20px 0 15px 0;
     font-family: 'Josefin Sans';
     font-weight: 700;
+    font-size: larger;
 }
 
 .manga-subtitle{
     margin: 10px 0 15px 0;
     font-family: 'Josefin Sans';
     font-weight: 500;
+    font-size: large;
+}
+
+@media (max-width: 1100px) {
+    .custom-card-header{
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .custom-card-header{
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .custom-card-header{
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .custom-card-header{
+        width: 100%;
+    }
 }
