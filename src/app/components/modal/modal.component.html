@@ -1,14 +1,11 @@
 <div *ngIf="mangaData">
     <div class="modal-header custom-header">
-        <div>
-            <h4 class="modal-title">{{mangaData.title}}</h4>
+        <div class="close-icon">
+            <button type="button" class="btn btn-secondary" aria-label="Close" (click)="closeModal()">X</button>
         </div>
         <div>
-            <span aria-hidden="true" class="close" aria-label="Close" (click)="closeModal()">X</span>
+            <h4 class="modal-title custom-title">{{mangaData.title}}</h4>
         </div>
-        <!-- <button type="button" class="close" aria-label="Close" (click)="closeModal()">
-        <span aria-hidden="true">&times;</span> -->
-        <!-- </button> -->
     </div>
     <div class="modal-body">
         <div class="modal-sub-title">

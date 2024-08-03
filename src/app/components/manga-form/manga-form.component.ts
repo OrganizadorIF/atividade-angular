@@ -22,6 +22,8 @@ export class MangaFormComponent {
   summary = '';
   trailer = '';
 
+  selectedOption: boolean = false;
+
   @ViewChild('mangaForm') mangaForm: NgForm | undefined;
 
   constructor(
@@ -58,5 +60,10 @@ export class MangaFormComponent {
     this.summary = '';
     this.trailer = '';
   }
+
+  options = [
+    { value: false, label: 'Option 1' },
+    { value: true, label: 'Option 2' }
+  ];
 
 }

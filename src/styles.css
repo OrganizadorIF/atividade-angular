@@ -24,8 +24,8 @@ body {
     background: grey; 
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1100px) {
     .modal-dialog.window {
-        max-width: 60%;
+        max-width: 1100px;
     }
 }

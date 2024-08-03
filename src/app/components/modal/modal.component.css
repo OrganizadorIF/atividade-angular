@@ -1,9 +1,19 @@
 .custom-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
+}
+
+.custom-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.close-icon {
+    margin-left: auto;
+    margin-bottom: -37px;
 }
 
 .modal-body {
@@ -19,17 +29,22 @@
 
 .modal-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     align-content: center;
     flex-wrap: wrap;
     border: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 img {
     width: 400px;
-    margin-right: 25px;
+    height: 597px;
+    border-style: groove;
+    border-color: grey;
+    border-radius: 2px;
 }
 
 .manga-details {
@@ -37,9 +52,10 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    align-content: center;
+    align-content: space-around;
     flex-wrap: wrap;
     width: min-content;
+    min-height: 597px;
 }
 
 .manga-summary {

@@ -20,27 +20,38 @@
                         <input id="cover" type="text" name="cover" class="form-control finput" [(ngModel)]="cover" #coverInput="ngModel" required>
                         <div *ngIf="coverInput.invalid && (coverInput.dirty || coverInput.touched)" class="error-message">Cover é obrigatório.</div>
                     </div>
-                    <div class="form-group">
-                        <label for="created_at">Release Date: *</label>
-                        <input id="created_at" type="date" name="created_at" class="form-control finput" [(ngModel)]="created_at" #created_atInput="ngModel" required>
-                        <div *ngIf="created_atInput.invalid && (created_atInput.dirty || created_atInput.touched)" class="error-message">Created at é obrigatório.</div>
+                    <div>
+                        <div class="form-group">
+                            <label for="created_at">First Volume: *</label>
+                            <input id="created_at" type="date" name="created_at" class="form-control finput" [(ngModel)]="created_at" #created_atInput="ngModel" required>
+                            <div *ngIf="created_atInput.invalid && (created_atInput.dirty || created_atInput.touched)" class="error-message">Created at é obrigatório.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last_release">Last Volume: *</label>
+                            <input id="last_release" type="date" name="last_release" class="form-control finput" [(ngModel)]="last_release" #last_releaseInput="ngModel" required>
+                            <div *ngIf="last_releaseInput.invalid && (last_releaseInput.dirty || last_releaseInput.touched)" class="error-message">Released at é obrigatório.</div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="last_release">Last Release Date: *</label>
-                        <input id="last_release" type="date" name="last_release" class="form-control finput" [(ngModel)]="last_release" #last_releaseInput="ngModel" required>
-                        <div *ngIf="last_releaseInput.invalid && (last_releaseInput.dirty || last_releaseInput.touched)" class="error-message">Released at é obrigatório.</div>
+                        <label for="status">Status: *</label>
+                        <div *ngFor="let option of options">
+                            <input id="status" type="radio" name="status" [id]="option.value" [name]="'options'" [value]="option.value" [(ngModel)]="selectedOption"/>
+                            <label [for]="option.value">{{ option.label }}</label>
+                        </div>
+                        <!-- <input id="status" type="date" name="status" class="form-control finput" [(ngModel)]="status" #statusInput="ngModel" required>
+                        <div *ngIf="statusInput.invalid && (statusInput.dirty || statusInput.touched)" class="error-message">Released at é obrigatório.</div> -->
                     </div>
                 </div>
                 <div style="flex-basis: 50%; align-self: center;">
                     <div class="form-group">
-                        <label for="summary">Description: *</label>
-                        <!-- <input id="description" type="text" name="description" class="form-control finput" [(ngModel)]="description" #descriptionInput="ngModel" required> -->
+                        <label for="summary">Summary: *</label>
                         <textarea id="summary" type="text" name="summary" class="form-control finput" [(ngModel)]="summary" #summaryInput="ngModel" required></textarea>
                         <div *ngIf="summaryInput.invalid && (summaryInput.dirty || summaryInput.touched)" class="error-message">Description at é obrigatório.</div>
                     </div>
                     <div class="form-group">
-                        <label for="trailer">Adapation Trailer:</label>
+                        <label for="trailer">Promotional Video:</label>
                         <input id="trailer" type="text" name="trailer" class="form-control finput" [(ngModel)]="trailer" #trailerInput="ngModel">
+                        <div *ngIf="trailerInput.invalid && (trailerInput.dirty || trailerInput.touched)" class="error-message">Description at é obrigatório.</div>
                     </div>
                     <div style="text-align: center; margin-top: 25px;">
                         <button type="submit" class="styled-button">
