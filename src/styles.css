@@ -23,3 +23,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: grey; 
 }
+
+@media (min-width: 576px) {
+    .modal-dialog.window {
+        max-width: 60%;
+    }
+}

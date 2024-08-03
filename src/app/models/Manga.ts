@@ -5,6 +5,7 @@ export interface Manga {
     cover: string;
     created_at: string;
     last_release: string;
-    description: string;
-    adaption_trailer: string;
+    status: boolean;
+    summary: string;
+    trailer: string;
 }

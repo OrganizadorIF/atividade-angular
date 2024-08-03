@@ -1,13 +1,42 @@
-<div class="modal-header">
-    <h4 class="modal-title">{{mangaData?.title}}</h4>
-    <button type="button" class="close" aria-label="Close" (click)="bsModalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-<div class="modal-body">
-    {{ mangaData?.created_at | date: 'dd/MM/yyyy' }} - {{ mangaData?.last_release }}
-    {{ mangaData?.description }}
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Close</button>
+<div *ngIf="mangaData">
+    <div class="modal-header custom-header">
+        <div>
+            <h4 class="modal-title">{{mangaData.title}}</h4>
+        </div>
+        <div>
+            <span aria-hidden="true" class="close" aria-label="Close" (click)="closeModal()">X</span>
+        </div>
+        <!-- <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span> -->
+        <!-- </button> -->
+    </div>
+    <div class="modal-body">
+        <div class="modal-sub-title">
+            <span style="font-weight: 600;">Author: </span>{{ mangaData.author }}
+            <span style="font-weight: 700;"> | </span>
+            <span style="font-weight: 600;">First volume: </span>{{ mangaData.created_at | date: 'MMMM d, YYYY' }}
+            <span style="font-weight: 700;"> | </span>
+            <span style="font-weight: 600;">Last volume: </span>{{ mangaData.last_release | date: 'MMMM d, YYYY' }}
+            <span style="font-weight: 700;"> | </span>
+            <span style="font-weight: 600;">Status: </span>{{ mangaData.status ? 'Completed.' : 'Still going.' }}
+        </div>
+        <div class="modal-content">
+            <div>
+                <img src="{{mangaData.cover}}">
+            </div>
+            <div class="manga-details">
+                <div class="manga-summary">
+                    {{ mangaData.summary }}
+                </div>
+                <div>
+                    <iframe width="560" height="315" [src]="updateVideoUrl(mangaData.trailer)" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+    </div>
 </div>

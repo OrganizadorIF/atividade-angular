@@ -33,14 +33,14 @@
                 </div>
                 <div style="flex-basis: 50%; align-self: center;">
                     <div class="form-group">
-                        <label for="description">Description: *</label>
+                        <label for="summary">Description: *</label>
                         <!-- <input id="description" type="text" name="description" class="form-control finput" [(ngModel)]="description" #descriptionInput="ngModel" required> -->
-                        <textarea id="description" type="text" name="description" class="form-control finput" [(ngModel)]="description" #descriptionInput="ngModel" required></textarea>
-                        <div *ngIf="descriptionInput.invalid && (descriptionInput.dirty || descriptionInput.touched)" class="error-message">Description at é obrigatório.</div>
+                        <textarea id="summary" type="text" name="summary" class="form-control finput" [(ngModel)]="summary" #summaryInput="ngModel" required></textarea>
+                        <div *ngIf="summaryInput.invalid && (summaryInput.dirty || summaryInput.touched)" class="error-message">Description at é obrigatório.</div>
                     </div>
                     <div class="form-group">
-                        <label for="adaption_trailer">Adapation Trailer:</label>
-                        <input id="adaption_trailer" type="text" name="adaption_trailer" class="form-control finput" [(ngModel)]="adaption_trailer" #adaption_trailerInput="ngModel">
+                        <label for="trailer">Adapation Trailer:</label>
+                        <input id="trailer" type="text" name="trailer" class="form-control finput" [(ngModel)]="trailer" #trailerInput="ngModel">
                     </div>
                     <div style="text-align: center; margin-top: 25px;">
                         <button type="submit" class="styled-button">

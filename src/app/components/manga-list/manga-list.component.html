@@ -7,7 +7,9 @@
                 <div class="manga-details">
                     <h3 class="manga-title">{{manga.title}}</h3>
                     <h4 class="manga-subtitle">{{manga.author}}</h4>
-                    <h4 class="manga-subtitle">{{manga.created_at | date: 'YYYY'}} - {{manga.last_release | date: 'YYYY'}}</h4>
+                    <h4 class="manga-subtitle">
+                        {{manga.created_at | date: 'YYYY'}} - {{manga.last_release | date: 'YYYY'}}<a *ngIf="!manga.status">*</a>
+                    </h4>
                 </div>
             </li>
         </ul>

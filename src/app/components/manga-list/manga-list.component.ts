@@ -15,7 +15,7 @@ import { Manga } from '../../models/Manga';
 })
 export class MangaListComponent {
 
-  manga!: any;
+  manga: any;
   bsModalRef?: BsModalRef;
 
   public constructor(
@@ -24,11 +24,10 @@ export class MangaListComponent {
   ) { }
 
   openModal(manga: Manga) {
-    console.log(manga);
-    const initialState = {
-      mangaData: manga
-    }
-    this.bsModalRef = this.modalService.show(ModalComponent, { initialState });
+    const initialState = { mangaData: manga }
+    this.bsModalRef = this.modalService.show(
+      ModalComponent, { initialState, class: 'window' }
+    );
   }
 
   closeModal(): void {

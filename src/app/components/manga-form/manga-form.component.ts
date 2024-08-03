@@ -18,8 +18,9 @@ export class MangaFormComponent {
   cover = '';
   created_at = '';
   last_release = '';
-  description = '';
-  adaption_trailer = '';
+  status = false;
+  summary = '';
+  trailer = '';
 
   @ViewChild('mangaForm') mangaForm: NgForm | undefined;
 
@@ -36,8 +37,9 @@ export class MangaFormComponent {
       cover: this.cover,
       created_at: this.created_at,
       last_release: this.last_release,
-      description: this.description,
-      adaption_trailer: this.adaption_trailer
+      status: this.status,
+      summary: this.summary,
+      trailer: this.trailer
     };
     this.mangaService.addChar(newManga);
     this.resetForm();
@@ -52,8 +54,9 @@ export class MangaFormComponent {
     this.cover = '';
     this.created_at = '';
     this.last_release = '';
-    this.description = '';
-    this.adaption_trailer = '';
+    this.status = false;
+    this.summary = '';
+    this.trailer = '';
   }
 
 }
