@@ -40,19 +40,27 @@ form {
     flex-direction: row;
     align-content: center;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
 }
 
 .form-group {
     margin-bottom: 1rem;
     font-family: 'Josefin Sans';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 90%;
 }
   
 .form-group label {
-    display: block;
+    /* display: block; */
     margin-bottom: 0.5rem;
     font-weight: bold;
+    width: fit-content;
 }
   
 .form-control {
@@ -86,6 +94,7 @@ textarea {
     justify-content: space-around;
     margin-left: 20px;
     margin-right: 20px;
+    min-width: 18rem;
 }
 
 .preview-card:hover {
@@ -108,12 +117,14 @@ textarea {
     margin: 20px 0 15px 0;
     font-family: 'Josefin Sans';
     font-weight: 700;
+    font-size: larger;
 }
 
 .manga-subtitle{
     margin: 10px 0 15px 0;
     font-family: 'Josefin Sans';
     font-weight: 500;
+    font-size: large;
 }
 
 .error-message {
@@ -137,4 +148,146 @@ button {
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+.date-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+}
+
+.selection-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+    align-content: center;
+    flex-wrap: nowrap;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.status {
+    margin-bottom: 0 !important;
+    /* margin-right: 15px; */
+    height: 21px;
+}
+
+.select-label {
+    margin-left: 10px;
+    min-width: 70px;
+    margin-bottom: 0 !important;
+    height: 21px;
+    min-width: fit-content;
+}
+
+.third-section {
+    flex-basis: 50%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+input.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+
+textarea.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+
+.preview-section {
+    flex-basis: 25%;
+    min-width: 22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    flex-basis: 75%;
+}
+
+@media (max-width: 1800px) {
+    .form-section {
+        flex-basis: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 445px) {
+    .preview-section {
+        flex-basis: unset;
+        width: 100%;
+    }
+    .first-section {
+        flex-basis: unset;
+        width: 100%;
+    }
+    .third-section {
+        flex-basis: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .custom-card-header{
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .custom-card-header{
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .custom-card-header{
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .custom-card-header{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .preview-card{
+        min-width: unset;
+        width: auto;
+    }
 }

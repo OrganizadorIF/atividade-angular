@@ -1,5 +1,5 @@
 .custom-card {
-    max-width: 80%;
+    max-width: 60%;
     margin: 0 auto 1.5rem auto;
     border-radius: 10px;
     overflow: hidden;
@@ -30,65 +30,24 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
-ul {
-    padding-inline-start: 0px;
-}
-
-li {
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
-    transition: background-color 0.3s;
+.about-details {
     display: flex;
-    position: relative;
     flex-direction: column;
+    justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-around;
-    margin-left: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-li:hover {
-    background-color: #e9ecef;
-}
-
-.manga-details {
-    align-self: center;
-    text-align: center;
-}
-
-.manga-image {
-    width: 180px;
-    height: 240px;
-    border-radius: 2px;
-    border-style: groove;
-}
-
-.manga-title {
-    margin: 20px 0 15px 0;
     font-family: 'Josefin Sans';
-    font-weight: 700;
-    font-size: larger;
+    margin: auto 15px auto 15px;
+    text-align: justify;
+    width: 60%;
 }
 
-.manga-subtitle{
-    margin: 10px 0 15px 0;
-    font-family: 'Josefin Sans';
-    font-weight: 500;
-    font-size: large;
-}
-
-a {
-    color: unset;
-    text-decoration: none;
+img {
+    width: 300px;
 }
 
 @media (max-width: 1100px) {
@@ -112,5 +71,27 @@ a {
 @media (max-width: 500px) {
     .custom-card-header{
         width: 100%;
+    }
+}
+
+@media (max-width: 1429px) {
+    .custom-card {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+    img {
+        width: 250px;
+    }
+    .custom-card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1072px) {
+    .about-details{
+        margin: 20px 15px 20px 15px;
+        width: 90%;
     }
 }

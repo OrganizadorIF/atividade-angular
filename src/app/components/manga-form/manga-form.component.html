@@ -2,67 +2,65 @@
 <div class="custom-card">
     <h2 class="custom-card-header">Manga Form</h2>
     <div class="custom-card-body">
-        <div style="flex-basis: 75%; margin-bottom: 20px; margin-top: 10px;">
+        <div class="form-section">
             <form #mangaForm="ngForm" (ngSubmit)="mangaForm.form.valid && onSubmit()" style="text-align: center;">
-                <div style="flex-basis: 50%;">
+                <div class="first-section">
                     <div class="form-group">
                         <label for="title">Title: *</label>
                         <input id="title" type="text" name="title" class="form-control finput" [(ngModel)]="title" #titleInput="ngModel" required>
-                        <div *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched)" class="error-message">Título é obrigatório.</div>
+                        <div *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched)" class="error-message">Title is required.</div>
                     </div>
                     <div class="form-group">
                         <label for="author">Author: *</label>
                         <input id="author" type="text" name="author" class="form-control finput" [(ngModel)]="author" #authorInput="ngModel" required>
-                        <div *ngIf="authorInput.invalid && (authorInput.dirty || authorInput.touched)" class="error-message">Autor(a) é obrigatório.</div>
+                        <div *ngIf="authorInput.invalid && (authorInput.dirty || authorInput.touched)" class="error-message">Author is required.</div>
                     </div>
                     <div class="form-group">
                         <label for="cover">Cover: *</label>
                         <input id="cover" type="text" name="cover" class="form-control finput" [(ngModel)]="cover" #coverInput="ngModel" required>
-                        <div *ngIf="coverInput.invalid && (coverInput.dirty || coverInput.touched)" class="error-message">Cover é obrigatório.</div>
+                        <div *ngIf="coverInput.invalid && (coverInput.dirty || coverInput.touched)" class="error-message">Cover is required.</div>
                     </div>
-                    <div>
-                        <div class="form-group">
-                            <label for="created_at">First Volume: *</label>
-                            <input id="created_at" type="date" name="created_at" class="form-control finput" [(ngModel)]="created_at" #created_atInput="ngModel" required>
-                            <div *ngIf="created_atInput.invalid && (created_atInput.dirty || created_atInput.touched)" class="error-message">Created at é obrigatório.</div>
+                    <div class="date-section">
+                        <div class="form-group" style="width: 50%;">
+                            <label for="created_at" style="width: 90%;">First Volume: *</label>
+                            <input id="created_at" type="date" name="created_at" class="form-control" style="width: 90%;" [(ngModel)]="created_at" #created_atInput="ngModel" required>
+                            <div *ngIf="created_atInput.invalid && (created_atInput.dirty || created_atInput.touched)" class="error-message">First volume is required.</div>
                         </div>
-                        <div class="form-group">
-                            <label for="last_release">Last Volume: *</label>
-                            <input id="last_release" type="date" name="last_release" class="form-control finput" [(ngModel)]="last_release" #last_releaseInput="ngModel" required>
-                            <div *ngIf="last_releaseInput.invalid && (last_releaseInput.dirty || last_releaseInput.touched)" class="error-message">Released at é obrigatório.</div>
+                        <div class="form-group" style="width: 50%;">
+                            <label for="last_release" style="width: 90%;">Last Volume: *</label>
+                            <input id="last_release" type="date" name="last_release" class="form-control" style="width: 90%;" [(ngModel)]="last_release" #last_releaseInput="ngModel" required>
+                            <div *ngIf="last_releaseInput.invalid && (last_releaseInput.dirty || last_releaseInput.touched)" class="error-message">Last volume is required.</div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="status">Status: *</label>
-                        <div *ngFor="let option of options">
-                            <input id="status" type="radio" name="status" [id]="option.value" [name]="'options'" [value]="option.value" [(ngModel)]="selectedOption"/>
-                            <label [for]="option.value">{{ option.label }}</label>
+                    <div class="form-group selection-section">
+                        <label for="status" class="status">Status: *</label>
+                        <div *ngFor="let option of options" class="option">
+                            <input id="status" type="radio" name="status" class="" [id]="option.value" [name]="'options'" [value]="option.value" [(ngModel)]="completed"/>
+                            <label [for]="option.value" class="select-label">{{ option.label }}</label>
                         </div>
-                        <!-- <input id="status" type="date" name="status" class="form-control finput" [(ngModel)]="status" #statusInput="ngModel" required>
-                        <div *ngIf="statusInput.invalid && (statusInput.dirty || statusInput.touched)" class="error-message">Released at é obrigatório.</div> -->
                     </div>
                 </div>
-                <div style="flex-basis: 50%; align-self: center;">
+                <div class="third-section">
                     <div class="form-group">
                         <label for="summary">Summary: *</label>
                         <textarea id="summary" type="text" name="summary" class="form-control finput" [(ngModel)]="summary" #summaryInput="ngModel" required></textarea>
-                        <div *ngIf="summaryInput.invalid && (summaryInput.dirty || summaryInput.touched)" class="error-message">Description at é obrigatório.</div>
+                        <div *ngIf="summaryInput.invalid && (summaryInput.dirty || summaryInput.touched)" class="error-message">Summary is required.</div>
                     </div>
                     <div class="form-group">
-                        <label for="trailer">Promotional Video:</label>
-                        <input id="trailer" type="text" name="trailer" class="form-control finput" [(ngModel)]="trailer" #trailerInput="ngModel">
-                        <div *ngIf="trailerInput.invalid && (trailerInput.dirty || trailerInput.touched)" class="error-message">Description at é obrigatório.</div>
+                        <label for="trailer">Promotional Video: *</label>
+                        <input id="trailer" type="text" name="trailer" class="form-control finput" [(ngModel)]="trailer" #trailerInput="ngModel" required>
+                        <div *ngIf="trailerInput.invalid && (trailerInput.dirty || trailerInput.touched)" class="error-message">Promotional video is required.</div>
                     </div>
                     <div style="text-align: center; margin-top: 25px;">
-                        <button type="submit" class="styled-button">
+                        <button type="submit" class="styled-button" [disabled]="!mangaForm.form.valid" [ngStyle]="!mangaForm.form.valid ? { 'cursor': 'not-allowed' } : { }">
                             <span class="material-symbols-outlined" style="margin-right: 5px;">save</span>
-                            <span>Adicionar</span>
+                            <span style="height: 23px;">Adicionar</span>
                         </button>
                     </div>
                 </div>
             </form>
         </div>
-        <div style="flex-basis: 25%;">
+        <div class="preview-section">
             <div class="preview-card">
                 <img src="{{cover}}" class="manga-image" *ngIf="cover">
                 <div class="manga-details">

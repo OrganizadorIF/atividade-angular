@@ -1,6 +1,7 @@
 import { CommonModule, formatDate } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { MangaService } from '../../services/manga.service';
 import { Manga } from '../../models/Manga';
 
@@ -9,7 +10,7 @@ import { Manga } from '../../models/Manga';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './manga-form.component.html',
-  styleUrl: './manga-form.component.css'
+  styleUrl: './manga-form.component.css',
 })
 export class MangaFormComponent {
 
@@ -22,16 +23,17 @@ export class MangaFormComponent {
   summary = '';
   trailer = '';
 
-  selectedOption: boolean = false;
+  completed: boolean = false;
 
   @ViewChild('mangaForm') mangaForm: NgForm | undefined;
 
   constructor(
-    public mangaService: MangaService
+    private mangaService: MangaService,
+    private toastr: ToastrService
   ) { }
 
   onSubmit(){
-    console.log('teste');
+    this.toastr.success('O manga foi adicionado à lista.', 'Sucesso!');
     const newManga: Manga = {
       id: 0,
       title: this.title,
@@ -62,8 +64,8 @@ export class MangaFormComponent {
   }
 
   options = [
-    { value: false, label: 'Option 1' },
-    { value: true, label: 'Option 2' }
+    { value: false, label: 'Still going' },
+    { value: true, label: 'Completed' }
   ];
 
 }
