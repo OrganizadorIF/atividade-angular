@@ -53,7 +53,7 @@ export class MangaService {
       It follows Clare, a warrior known as a Claymore, who is part human and part Yoma, tasked with hunting these creatures. Driven by a \
       personal quest for vengeance and uncovering the truth about her own existence, Clare battles both formidable foes and her own inner \
       demons, exploring themes of identity, sacrifice, and the cost of power amidst intense action and a complex plot.",
-      trailer: 'c5DDD0ofspk?si=Ac2YJB9rsTylr6q2'
+      trailer: 'dbj9Yjskco0?si=OylCQJUV8ALgIXjZ'
     },
     {
       id: 4,
